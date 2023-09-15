@@ -18,9 +18,9 @@ const EventList = () => {
   const filteredEvents = (
     (!type
       ? data?.events
-      : data?.events) || []
+      : data?.events.filter) || []
   ).filter((event, index) => {
-    if ( // condition qui gere la pagination
+    if ( // condition qui gere la pagination et le filtrage
       (currentPage - 1) * PER_PAGE <= index &&
       PER_PAGE * currentPage > index &&
       !type || type === event.type // verifie si aucun type de catego n'est selectionné ou si le type correspond a la categorie selectionné
