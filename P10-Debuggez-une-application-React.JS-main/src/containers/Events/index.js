@@ -18,7 +18,7 @@ const EventList = () => {
   const filteredEvents = (
     (!type
       ? data?.events
-      : data?.events.filter) || []
+      : data?.events) || []
   ).filter((event, index) => {
     if ( // condition qui gere la pagination et le filtrage
       (currentPage - 1) * PER_PAGE <= index &&
